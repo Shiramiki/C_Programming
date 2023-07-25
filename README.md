@@ -8,6 +8,19 @@ this program changes temperature from degree Celsius to Fahrenheit
 ### switch_statements.c
 This program uses a switch to output the choice the user has input
 
+It is a conversation of these if statements 
+
+if (choice == 1) {
+printf(“You have selected choice one”);
+} else if ((choice == 2) || (choice == 3)) { 
+printf(“You have selected choice two or three”); 
+} else if (choice == 4) { 
+printf(“You have selected choice four”); 
+} else { 
+printf(“You have selected no choice or the wrong choice”); 
+}
+
+
 ### for_loop.c
 This is a program that prints multiples of ten from 0 to 1000 using a for loop
 
