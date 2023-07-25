@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+    //This program uses a switch to output the choice the user has input
     int choice;
 
     printf("Please enter your Choice");

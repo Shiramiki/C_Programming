@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 int main(){
+    /*
+        This progran allows the user to input their name, then outputs whether or not the are an adult
+    */
     int age;
 
     printf("Please enter your age");

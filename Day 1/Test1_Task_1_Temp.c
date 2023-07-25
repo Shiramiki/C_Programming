@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 int main (){
+    //this program changes temperature from degree Celsius to Fahrenheit
     float temp_c, temp_f;
-    printf("Please enter temperature in Degrees Celcius");
+    printf("Please enter temperature in Degrees Celsius");
     scanf("%f", &temp_c);
 
     temp_f=((9/5) * temp_c + 32);

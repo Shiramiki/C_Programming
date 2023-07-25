@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(){
+    //This program outputs that a temperature is valid if it is within the range -50 to 150
     float temp;
 
     printf("Please enter Temperature");

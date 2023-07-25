@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+    //This is a program that allows the user to enter a number and uses a switch statement to output the corresponding day
     int day;
     printf("Please enter number 1-7 to choose a corresponding day of the week");
     scanf("%d", &day);
