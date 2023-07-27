@@ -1,48 +1,41 @@
-#include  <stdio.h>
+#include <stdio.h>
 
-int main(){
-    int share_calc(int ns, int pp, int pc, int sp, int sc);
-    int num_s, share_p, sale_c, purchase_p, purchase_c, verdict;
-
-    printf("Please enter the Number of shares: ");
-    scanf("%d", &num_s);
-
-    printf("Please enter the Sale price per Share: ");
-    scanf("%d", &share_p);
-
-    printf("Please enter the Sale Commission: ");
-    scanf("%d",&sale_c);
-
-    printf("Please enter the Purchase Price per Share: ");
-    scanf("%d", &purchase_p);
-
-    printf("Please enter the purchase commission: ");
-    scanf("%d", &purchase_c);
-
-    verdict = share_calc(num_s,purchase_p,purchase_c,share_p, sale_c);
-    
-    if(verdict< 0){
-        printf("You have made a loss.");
-        printf("Your loss is %d\n", (share_calc(num_s,purchase_p,purchase_c,share_p, sale_c)*-1));
-
-    }
-
-    else if (share_calc(num_s,purchase_p,purchase_c,share_p, sale_c) == 0)
-    {
-        printf("You have neither made a profit nor loss");
-    }
-    
-
-    else{
-        printf("You have a Profit\n");
-        printf("Your profit is %d\n", share_calc(num_s,purchase_p,purchase_c,share_p, sale_c));
-    }
-
-    return(0);
+// Function to calculate profit or loss
+int share_calc(int numShares, int purchasePrice, int purchaseCommission, int salePrice, int saleCommission) {
+    return ((numShares * salePrice) - saleCommission) - ((numShares * purchasePrice) + purchaseCommission);
 }
 
-int share_calc(int ns, int pp, int pc, int sp, int sc){
-    int profit = ((ns*sp)-sc) - ((ns*pp)+pc);
+int main() {
+    int numShares, salePrice, saleCommission, purchasePrice, purchaseCommission, result;
 
-    return(profit);
+    printf("Please enter the Number of shares: ");
+    scanf("%d", &numShares);
+
+    printf("Please enter the Sale price per Share: ");
+    scanf("%d", &salePrice);
+
+    printf("Please enter the Sale Commission: ");
+    scanf("%d", &saleCommission);
+
+    printf("Please enter the Purchase Price per Share: ");
+    scanf("%d", &purchasePrice);
+
+    printf("Please enter the Purchase Commission: ");
+    scanf("%d", &purchaseCommission);
+
+    result = share_calc(numShares, purchasePrice, purchaseCommission, salePrice, saleCommission);
+    
+    if(result < 0){
+        printf("You have made a loss.\n");
+        printf("Your loss is %d\n", -result);
+    }
+    else if (result == 0) {
+        printf("You have neither made a profit nor loss.\n");
+    }
+    else {
+        printf("You have a Profit.\n");
+        printf("Your profit is %d\n", result);
+    }
+
+    return 0;
 }
